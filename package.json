@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/deuxp/gpio-leds/issues"
   },
-  "homepage": "https://github.com/deuxp/gpio-leds#readme"
+  "homepage": "https://github.com/deuxp/gpio-leds#readme",
+  "dependencies": {
+    "onoff": "^6.0.3"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
+  }
 }

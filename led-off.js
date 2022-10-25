@@ -6,8 +6,7 @@ const ledOut = new Gpio("4", "out");
 // current LED state
 let isLedOn = false;
 
-// run an infinite interval
-setInterval(() => {
-  ledOut.writeSync(isLedOn ? 0 : 1);
-  isLedOn = !isLedOn; // toggle state
-}, 3000);
+// turn the light off
+ledOut.writeSync(0);
+console.log('LED is off')
+console.log({ledOut})
