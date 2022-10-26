@@ -1,5 +1,5 @@
 const { Gpio } = require("onoff");
-const lightSwitch = process.argv[2];
+const lightSwitch = Number(process.argv[2]);
 const PIN = 4;
 const OUT = "out";
 let output;
