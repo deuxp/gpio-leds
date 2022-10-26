@@ -7,15 +7,17 @@ let output;
 const ledOut = new Gpio(PIN, OUT);
 
 const LEDToggle = (value) => {
+  const isLEDon = !!value;
   if (Gpio.accessible) {
     ledOut.writeSync(value);
-    console.log("Is light on: ", !!value);
+    console.log("Is light on: ", isLEDon);
   } else {
     output = {
       BCM: PIN,
-      high: !!value,
-      low: !!value,
-      state: `The LED is ${!!value ? "on" : "off"}`,
+      rawValue: value,
+      high: isLEDon,
+      low: isLEDon,
+      state: `The LED is ${isLEDon ? "on" : "off"}`,
     };
     console.log({ output });
   }
